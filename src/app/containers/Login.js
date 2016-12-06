@@ -97,8 +97,8 @@ var FormBlock=React.createClass({
                         <input type="password" placeholder="密码" className="form-control input-style" ref='password'/>
                     </div>
                     <button type="button" className="submit-btn" onClick={e=>submitHandle({
-                        phone:$(this.refs.phone).val(),
-                        password:$(this.refs.password).val(),
+                        phone:ReactDOM.findDOMNode(this.refs.phone).value,
+                        password:ReactDOM.findDOMNode(this.refs.password).value,
                         from:'web',
                     })}>登 录</button>
                     <div className="bottom-btn-group">
